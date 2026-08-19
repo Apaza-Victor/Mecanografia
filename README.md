@@ -1,89 +1,142 @@
 # Teclea — Aprende mecanografía
 
-Una aplicación web interactiva para aprender mecanografía paso a paso. Diseñada en español, incluye 6 lecciones progresivas, práctica guiada con retroalimentación en tiempo real y laboratorio 3D.
+Una aplicación web interactiva para aprender mecanografía paso a paso. Diseñada en español, incluye 6 lecciones progresivas, práctica guiada con retroalimentación en tiempo real, laboratorio 3D y recursos completos para dominar el teclado.
+
+**Vivo:** [apaza-victor.github.io/Mecanografia](https://apaza-victor.github.io/Mecanografia/)
 
 ## Características
 
-- Panel de bienvenida con meta diaria y racha de aprendizaje.
-- Ruta visual de 6 lecciones con estados completado, actual y bloqueado.
-- Práctica guiada con 8 ejercicios variados de la fila guía (A S D F · J K L Ñ).
-- Medición de precisión, tiempo y progreso en tiempo real.
-- Teclado visual que ilumina las teclas al presionarlas.
-- Persistencia de progreso con localStorage (precisión, minutos practicados, ejercicios completados).
-- Laboratorio 3D interactivo con Babylon.js para visualizar las teclas.
-- Modo oscuro con toggle y persistencia de preferencia.
-- Animaciones de entrada con Anime.js.
-- Diseño adaptable para escritorio, tablet y móvil.
+- 12 niveles progresivos con 60 ejercicios de práctica
+- Teclado 3D realista con highlight por dedo y guía de colores
+- Sistema de guía de dedos (qué dedo usar para cada tecla)
+- Medición en tiempo real: precisión, WPM, tiempo, estrellas
+- Laboratorio 3D interactivo con Babylon.js
+- Dark/light mode con persistencia en localStorage
+- Animaciones de scroll con Anime.js
+- Tracking de racha (streak) y progreso acumulado
+- 6 lecciones educativas completas (postura, fila guía, ritmo, QWERTY, fila inferior, práctica real)
+- Página de recursos con programas, webs y apps recomendadas
+- Página de trucos y consejos (28 tips para mejorar)
+- Totalmente responsive (escritorio, tablet, móvil)
 
 ## Tecnologías
 
-- HTML5
-- CSS3 (variables CSS, clamp(), conic-gradient, grid, flexbox)
-- JavaScript (Vanilla JS, módulo IIFE compartido)
-- Google Fonts: Manrope y DM Mono
-- Lucide Icons (SVG vectoriales)
-- Babylon.js (motor 3D WebGL)
-- Anime.js (animaciones)
+| Capa | Tecnología |
+|------|-----------|
+| Markup | HTML5 (semántico, lang="es") |
+| Estilos | CSS3 (variables, clamp(), grid, flexbox, backdrop-filter) |
+| Lógica | JavaScript vanilla (módulo IIFE, sin frameworks) |
+| 3D | Babylon.js (WebGL) + CSS 3D transforms |
+| Animaciones | Anime.js |
+| Iconos | Font Awesome 6.5.1 (CDN) |
+| Fuentes | Google Fonts — Manrope (UI) + DM Mono (escritura) |
+| Persistencia | localStorage |
 
 ## Estructura del proyecto
 
 ```text
 Mecanografia/
-├── index.html                    # Página principal (HOME)
-├── README.md                     # Documentación del proyecto
+├── index.html                     # Página principal
+├── README.md
 │
 ├── assets/
-│   ├── css/                      # 11 archivos CSS
-│   │   ├── styles.css            # Estilos base y variables
-│   │   ├── layout.css            # Layout fluido, header fijo, responsive
-│   │   ├── home.css              # Estilos del home page
-│   │   ├── home-polish.css       # Detalles de pulido del home
-│   │   ├── enhancements.css      # Progress overview, method, bottom CTA
-│   │   ├── theme.css             # Modo oscuro y toggle de tema
-│   │   ├── lessons.css           # Catálogo y vista detalle de lecciones
-│   │   ├── libraries.css         # Estilos del laboratorio 3D
-│   │   ├── libraries-fix.css     # Fixes de z-index para hero art
-│   │   ├── icons.css             # Tamaños de íconos Lucide
-│   │   └── footer.css            # Estilos del footer
+│   ├── css/                       # 12 archivos CSS modulares
+│   │   ├── styles.css             # Base, variables, dark mode
+│   │   ├── layout.css             # Layout de subpáginas
+│   │   ├── home.css               # Hero del home
+│   │   ├── enhancements.css       # Grid de lecciones, progreso, método
+│   │   ├── improvements.css       # Práctica, catálogo, recursos, trucos
+│   │   ├── lessons.css            # Detalle de lecciones
+│   │   ├── keyboard-practice.css  # Teclado 3D de práctica
+│   │   ├── keyboard-3d.css        # Teclado CSS 3D del hero
+│   │   ├── theme.css              # Dark mode completo
+│   │   ├── footer.css             # Footer
+│   │   ├── icons.css              # Tamaños de iconos
+│   │   └── libraries.css          # Babylon canvas
 │   │
 │   ├── images/
-│   │   └── teclea-logo.svg       # Logo del proyecto
+│   │   └── teclea-logo.svg        # Logo
 │   │
-│   └── js/                       # 5 archivos JS
-│       ├── shared.js             # Módulo compartido de práctica y progreso
-│       ├── script.js             # Lógica de la página principal
-│       ├── theme.js              # Toggle de modo oscuro
-│       ├── experience.js         # Escena Babylon.js + animaciones Anime.js
-│       └── practice.js           # Lógica de práctica standalone
+│   └── js/                        # 8 archivos JS
+│       ├── shared.js              # Motor principal (niveles, práctica, progreso)
+│       ├── script.js              # Controlador del home
+│       ├── practice.js            # Controlador de práctica standalone
+│       ├── theme.js               # Toggle dark/light mode
+│       ├── experience.js          # Babylon.js 3D + Anime.js
+│       ├── keyboard-3d.js         # Interacción teclado CSS 3D
+│       ├── css-keyboard.js        # Teclado CSS alternativo
+│       └── animated-bg.js         # Fondo animado (canvas)
 │
-└── pages/
-    ├── practicar.html            # Página de práctica independiente
-    ├── lecciones.html            # Catálogo de lecciones
-    └── lecciones/                # 6 lecciones individuales
-        ├── leccion-01.html       # Postura y posición
-        ├── leccion-02.html       # La fila guía
-        ├── leccion-03.html       # Ritmo y precisión
-        ├── leccion-04.html       # Teclas de inicio
-        ├── leccion-05.html       # Mano izquierda (Q a T)
-        └── leccion-06.html       # Mano derecha (Y a P)
+├── pages/
+│   ├── practicar.html             # Página de práctica con selector de niveles
+│   ├── lecciones.html             # Catálogo de 6 lecciones
+│   ├── recursos.html              # Programas, webs y apps recomendadas
+│   ├── trucos.html                # 28 trucos y consejos
+│   └── lecciones/                 # Lecciones individuales
+│       ├── leccion-01.html        # Postura y posición
+│       ├── leccion-02.html        # La fila guía
+│       ├── leccion-03.html        # Ritmo y precisión
+│       ├── leccion-04.html        # Fila superior QWERTY
+│       ├── leccion-05.html        # Fila inferior y símbolos
+│       └── leccion-06.html        # Práctica real
+│
+└── snd/                           # Efectos de sonido
+    ├── key1.mp3
+    ├── key2.mp3
+    ├── key3.mp3
+    ├── freesound_community-mech-keyboard-02-102918.mp3
+    └── soul_serenity_sounds-typing-sound-02-229861.mp3
 ```
 
 ## Cómo usarlo
 
-1. Descarga o clona este proyecto.
+### Opción 1: GitHub Pages (en línea)
+Visita [apaza-victor.github.io/Mecanografia](https://apaza-victor.github.io/Mecanografia/)
+
+### Opción 2: Local
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Apaza-Victor/Mecanografia.git
+   ```
 2. Abre `index.html` en tu navegador.
-3. Haz clic en **Comenzar lección** o en **Empezar a practicar**.
-4. Escribe el texto mostrado sin mirar el teclado.
 
 No requiere instalación de dependencias ni servidor. Todas las librerías se cargan desde CDN.
 
+## Contenido educativo
+
+### Lecciones
+1. **Postura y posición** — Ergonomía, postura correcta, qué es la mecanografía
+2. **La fila guía** — ASDF JKLÑ, posición de los dedos, teclas de referencia
+3. **Ritmo y precisión** — WPM, por qué la precisión va primero que la velocidad
+4. **Fila superior QWERTY** — Mapa de dedos para la fila superior
+5. **Fila inferior y símbolos** — ZXCVBNM, mayúsculas, números, puntuación
+6. **Práctica real** — Ejercicios integrales con textos completos
+
+### Recursos
+- Programas de escritorio: Rapid Typing, TypingMaster, TIPP10, Klavaro
+- Webs interactivas: TypingClub, Keybr, Typing.com, 10FastFingers, ZType, TypeRacer, Monkeytype
+- Apps móviles: TypingClub, Rapid Typing, Keybr
+- Herramientas complementarias: Grammarly, teclados mecánicos, reposamuñecas
+- Tabla comparativa y plan de estudio sugerido
+
+### Trucos y consejos
+- 28 trucos organizados por nivel (principiante → avanzado)
+- Errores comunes a evitar (con comparaciones correcto/incorrecto)
+- Técnicas para ganar velocidad y mejorar precisión
+- Salud y ergonomía (regla 20-20-20, estiramientos)
+- Cómo superar mesetas de aprendizaje
+- Benchmarks de velocidad (10-120+ WPM)
+
 ## Persistencia
 
-El progreso se guarda automáticamente en `localStorage` con la clave `teclea-progress`:
+El progreso se guarda en `localStorage`:
 
-- Lecciones completadas
-- Mejor precisión obtenida
-- Minutos totales practicados
-- Ejercicios completados
+| Clave | Contenido |
+|-------|-----------|
+| `teclea-progress` | Nivel actual, niveles completados, estrellas, precisión, WPM, minutos, racha |
+| `teclea-theme` | Preferencia de modo oscuro/claro |
+| `teclea-playback` | Último ejercicio completado |
 
-La preferencia de modo oscuro se guarda con la clave `teclea-theme`.
+## Licencia
+
+Proyecto educativo. Usa las librerías indicadas bajo sus respectivas licencias.
