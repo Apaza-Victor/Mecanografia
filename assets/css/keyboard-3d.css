@@ -13,6 +13,7 @@
   cursor:pointer;
   padding-top:300px;
   z-index:101;
+  margin-left:40px;
 }
 #m .flex{
   display:flex;
