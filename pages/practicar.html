@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Practicar | Teclea</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/icons.css">
+  <link rel="stylesheet" href="../assets/css/improvements.css">
+  <link rel="stylesheet" href="../assets/css/keyboard-practice.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+</head>
+<body>
+  <main class="standalone-page">
+    <header class="topbar site-header">
+      <a class="brand" href="../index.html" aria-label="Teclea inicio"><span class="brand-mark">T</span><span>Teclea</span></a>
+      <nav class="header-nav" aria-label="Navegación principal">
+        <a href="../index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+        <a class="active" href="practicar.html"><i class="fa-solid fa-keyboard"></i>Practicar</a>
+        <a href="lecciones.html"><i class="fa-solid fa-book-open"></i>Lecciones</a>
+        <a href="recursos.html"><i class="fa-solid fa-link"></i>Recursos</a>
+        <a href="trucos.html"><i class="fa-solid fa-lightbulb"></i>Trucos</a>
+      </nav>
+      <div class="header-status">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activar modo oscuro" title="Cambiar modo"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <p class="eyebrow">PRACTICA GUIADA</p>
+      <h1>Practica sin mirar<br><em>el teclado.</em></h1>
+      <p>Selecciona un nivel y escribe con un ritmo tranquilo. La velocidad llegará con la práctica.</p>
+    </section>
+
+    <section class="level-selector">
+      <label for="levelSelect">Nivel:</label>
+      <select id="levelSelect"></select>
+    </section>
+
+    <section class="practice-panel standalone-practice">
+      <div class="practice-head">
+        <div>
+          <span class="eyebrow">EJERCICIO</span>
+          <h2 id="levelLabel">Fila guía</h2>
+        </div>
+        <a class="close-practice" href="../index.html"><i class="fa-solid fa-xmark"></i><span>Salir</span></a>
+      </div>
+      <div class="finger-guide" id="fingerGuide"></div>
+      <div class="practice-stats">
+        <span class="stat"><small>Precisión</small><b id="accuracy">100%</b></span>
+        <span class="stat"><small>Tiempo</small><b id="timer">0:00</b></span>
+        <span class="stat"><small>WPM</small><b id="wpm">0</b></span>
+        <span class="stat"><small>Progreso</small><b id="typedCount">0/0</b></span>
+      </div>
+      <div class="stars-row" id="stars"></div>
+      <p class="typing-line" id="typingLine" aria-label="Texto para escribir"></p>
+      <input id="typingInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Escribe el texto mostrado" placeholder="Empieza a escribir aquí…" />
+      <div class="keyboard" id="keyboard" aria-label="Teclado visual"></div>
+    </section>
+  </main>
+
+  <div class="completion-modal" id="completionModal" hidden>
+    <div class="modal-card">
+      <span class="modal-emoji"><i class="fa-solid fa-circle-check"></i></span>
+      <h3>¡Ejercicio completado!</h3>
+      <div class="modal-stars" id="finalStars"></div>
+      <div class="modal-stats">
+        <div><small>Precisión</small><b id="finalAccuracy">0%</b></div>
+        <div><small>WPM</small><b id="finalWPM">0</b></div>
+        <div><small>Tiempo</small><b id="finalTime">0:00</b></div>
+      </div>
+      <button class="primary-button" id="nextExercise">Siguiente ejercicio →</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/shared.js"></script>
+  <script src="../assets/js/practice.js"></script>
+  <script src="../assets/js/theme.js"></script>
+</body>
+</html>

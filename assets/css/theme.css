@@ -1,0 +1,251 @@
+/* === THEME TOGGLE (Font Awesome) === */
+.theme-toggle i{font-size:16px;line-height:1}
+
+/* === DARK MODE VARIABLES === */
+body.theme-dark{
+  --paper:#102433;
+  --ink:#edf7f8;
+  --muted:#b2c0ca;
+  --line:#294352;
+  background:#102433;
+}
+
+/* === DARK HEADER === */
+body.theme-dark .site-header{background:rgba(16,36,51,0.9)}
+body.theme-dark .theme-toggle{border-color:#294352;background:#1a2a3a;color:#b2c0ca}
+body.theme-dark .theme-toggle:hover{background:var(--ink);color:var(--paper)}
+
+/* === DARK HOME HERO === */
+body.theme-dark .lesson-hero{background:linear-gradient(135deg,#102433,#132c3e)}
+body.theme-dark .lesson-hero .eyebrow{color:var(--coral)}
+body.theme-dark .lesson-hero h2{color:#edf7f8}
+body.theme-dark .lesson-hero p{color:#8faab8}
+body.theme-dark .primary-button{background:linear-gradient(135deg,#2b958d,#1a6b64);color:#edf7f8}
+
+/* === DARK PATH SECTION === */
+body.theme-dark .path-section{color:#edf7f8}
+body.theme-dark .section-title h2{color:#edf7f8}
+body.theme-dark .lesson-card{background:rgba(255,255,255,0.04);border-color:#294352}
+body.theme-dark .lesson-card:hover{border-color:#3fb8b0;background:rgba(255,255,255,0.08)}
+body.theme-dark .lesson-card h3{color:#edf7f8}
+body.theme-dark .lesson-card small{color:#8faab8}
+body.theme-dark .lesson-card p{color:#b2c0ca}
+body.theme-dark .lesson-card .card-status{color:#6b8a96}
+body.theme-dark .lesson-card.done .card-status{color:#3fb8b0}
+body.theme-dark .lesson-card .lesson-open{color:#fb765f}
+
+/* === DARK PROGRESS OVERVIEW === */
+body.theme-dark .progress-overview{background:rgba(13,31,45,0.95);color:#edf7f8}
+body.theme-dark .progress-overview h2{color:#edf7f8}
+body.theme-dark .overview-copy p{color:#8faab8}
+body.theme-dark .metric-list article{background:rgba(255,255,255,0.05);border-color:#294352;color:#edf7f8}
+body.theme-dark .metric-list article p{color:#b2c0ca}
+
+/* === DARK LESSON DETAIL === */
+body.theme-dark .lesson-icon{background:linear-gradient(135deg,rgba(93,212,199,0.2),rgba(93,212,199,0.08))}
+body.theme-dark .lesson-icon i{color:#5dd4c7}
+body.theme-dark .lesson-lead{color:#8faab8}
+body.theme-dark .back-link{color:#6b8a96}
+body.theme-dark .back-link:hover{color:#fb765f}
+body.theme-dark .lesson-section h2{color:#edf7f8}
+body.theme-dark .lesson-section h2 i{color:#fb765f}
+body.theme-dark .lesson-section>p{color:#b2c0ca}
+body.theme-dark .lesson-section>ol,
+body.theme-dark .lesson-section>ul{color:#b2c0ca}
+body.theme-dark .lesson-nav{border-color:#294352}
+body.theme-dark .outline-button{border-color:#294352;color:#b2c0ca}
+body.theme-dark .outline-button:hover{border-color:#fb765f;color:#fb765f}
+/* Metric grid */
+body.theme-dark .metric-card{background:rgba(255,255,255,0.04);border-color:#294352}
+body.theme-dark .metric-card:hover{border-color:#3fb8b0}
+body.theme-dark .metric-icon{background:linear-gradient(135deg,rgba(93,212,199,0.2),rgba(93,212,199,0.08))}
+body.theme-dark .metric-icon i{color:#5dd4c7}
+body.theme-dark .metric-value{color:#edf7f8}
+body.theme-dark .metric-label{color:#8faab8}
+/* Keyboard diagram */
+body.theme-dark .full-keyboard-diagram{background:linear-gradient(135deg,#0d1f2d,#132c3e);border-color:#294352}
+body.theme-dark .kb-key{background:#1a2a3a;border-color:#294352;color:#b2c0ca;box-shadow:0 2px 0 rgba(0,0,0,0.2)}
+body.theme-dark .kb-key.f-a{background:#1a3a2a;border-color:#2e5a3e;color:#6fcf97}
+body.theme-dark .kb-key.f-s{background:#1a2a3e;border-color:#2a4a6e;color:#64b5f6}
+body.theme-dark .kb-key.f-d{background:#2a2a1a;border-color:#4a4a2e;color:#ffb74d}
+body.theme-dark .kb-key.f-f{background:#2a1a22;border-color:#4a2a3a;color:#f48fb1}
+body.theme-dark .kb-key.f-j{background:#2a1a22;border-color:#4a2a3a;color:#f48fb1}
+body.theme-dark .kb-key.f-k{background:#2a2a1a;border-color:#4a4a2e;color:#ffb74d}
+body.theme-dark .kb-key.f-l{background:#1a2a3e;border-color:#2a4a6e;color:#64b5f6}
+body.theme-dark .kb-key.f-ñ{background:#1a3a2a;border-color:#2e5a3e;color:#6fcf97}
+body.theme-dark .kb-key.f-z{background:#2a1a3a;border-color:#3a2a5a;color:#ce93d8}
+body.theme-dark .kb-key.f-c{background:#1a2a2a;border-color:#2a4a4a;color:#80cbc4}
+body.theme-dark .kb-key.num-row{background:#132020;border-color:#1a3030;color:#6b8a96}
+body.theme-dark .kb-key.dim{opacity:0.3}
+body.theme-dark .diagram-caption{color:#6b8a96}
+/* Finger legend */
+body.theme-dark .legend-color.f-a{background:#1a3a2a;border-color:#2e5a3e}
+body.theme-dark .legend-color.f-s{background:#1a2a3e;border-color:#2a4a6e}
+body.theme-dark .legend-color.f-d{background:#2a2a1a;border-color:#4a4a2e}
+body.theme-dark .legend-color.f-f{background:#2a1a22;border-color:#4a2a3a}
+body.theme-dark .legend-color.f-j{background:#2a1a22;border-color:#4a2a3a}
+body.theme-dark .legend-color.f-k{background:#2a2a1a;border-color:#4a4a2e}
+body.theme-dark .legend-color.f-l{background:#1a2a3e;border-color:#2a4a6e}
+body.theme-dark .legend-color.f-ñ{background:#1a3a2a;border-color:#2e5a3e}
+body.theme-dark .legend-color.f-z{background:#2a1a3a;border-color:#3a2a5a}
+body.theme-dark .legend-color.f-c{background:#1a2a2a;border-color:#2a4a4a}
+body.theme-dark .legend-color.num-row{background:#132020;border-color:#1a3030}
+/* Posture diagram */
+body.theme-dark .posture-diagram{background:linear-gradient(135deg,#0d1f2d,#132c3e);border-color:#294352}
+body.theme-dark .posture-item{background:rgba(255,255,255,0.03)}
+body.theme-dark .posture-item:hover{border-color:#3fb8b0}
+body.theme-dark .posture-icon{background:linear-gradient(135deg,rgba(93,212,199,0.2),rgba(93,212,199,0.08))}
+body.theme-dark .posture-icon i{color:#5dd4c7}
+body.theme-dark .posture-text strong{color:#edf7f8}
+body.theme-dark .posture-text p{color:#8faab8}
+/* Step flow */
+body.theme-dark .step-flow{background:linear-gradient(135deg,#0d1f2d,#132c3e);border-color:#294352}
+body.theme-dark .step-text{color:#edf7f8}
+body.theme-dark .step-arrow{color:#fb765f}
+/* Pattern box */
+body.theme-dark .pattern-box{background:linear-gradient(135deg,#0d1a28,#0f1f2e);border-color:#294352}
+body.theme-dark .pattern-box code{background:rgba(255,255,255,0.03);color:#5dd4c7}
+/* Tip box */
+body.theme-dark .tip-box{background:rgba(43,149,141,0.08);border-color:rgba(93,212,199,0.2);color:#b2c0ca}
+body.theme-dark .tip-box strong{color:#5dd4c7}
+/* Warning box */
+body.theme-dark .warning-box{background:rgba(251,118,95,0.08);border-color:rgba(251,118,95,0.2);color:#b2c0ca}
+body.theme-dark .warning-box strong{color:#fb765f}
+/* Comparison box */
+body.theme-dark .comparison-item{background:rgba(255,255,255,0.03);border-color:#294352}
+body.theme-dark .comparison-item p{color:#8faab8}
+body.theme-dark .comparison-item.correct h3{color:#66bb6a}
+body.theme-dark .comparison-item.wrong h3{color:#ef5350}
+/* Accuracy bars */
+body.theme-dark .accuracy-fill{box-shadow:0 0 8px rgba(43,149,141,0.3)}
+body.theme-dark .accuracy-text{color:#8faab8}
+/* Progress timeline */
+body.theme-dark .progress-timeline{background:linear-gradient(135deg,#0d1f2d,#132c3e);border-color:#294352}
+body.theme-dark .progress-timeline::before{background:#294352}
+body.theme-dark .timeline-dot{background:#1a2a3a;border-color:#3fb8b0}
+body.theme-dark .timeline-content strong{color:#edf7f8}
+body.theme-dark .timeline-content p{color:#8faab8}
+/* Rhythm visual */
+body.theme-dark .rhythm{background:rgba(255,255,255,0.03);border-color:#294352}
+body.theme-dark .rhythm-bars span{background:#294352}
+body.theme-dark .rhythm.good .rhythm-bars span{background:#2e7d32}
+body.theme-dark .rhythm.bad .rhythm-bars span{background:#c62828}
+body.theme-dark .rhythm-desc{color:#6b8a96}
+/* Lesson columns */
+body.theme-dark .lesson-col{background:rgba(255,255,255,0.03);border-color:#294352}
+body.theme-dark .lesson-col h3{color:#edf7f8}
+body.theme-dark .lesson-col li{color:#8faab8;border-color:rgba(255,255,255,0.04)}
+body.theme-dark .lesson-col li strong{color:#edf7f8}
+/* Punctuation grid */
+body.theme-dark .punct-item{background:rgba(255,255,255,0.03);border-color:#294352}
+body.theme-dark .punct-item:hover{border-color:#3fb8b0}
+body.theme-dark .punct-char{background:linear-gradient(135deg,#132c3e,#1a3a4d);color:#edf7f8}
+body.theme-dark .punct-name{color:#edf7f8}
+body.theme-dark .punct-key{color:#6b8a96}
+/* Frequency chart */
+body.theme-dark .freq-chart{background:linear-gradient(135deg,#0d1f2d,#132c3e);border-color:#294352}
+body.theme-dark .freq-letter{color:#edf7f8}
+body.theme-dark .freq-bar{background:linear-gradient(90deg,#2b958d,#3fb8b0)}
+body.theme-dark .freq-pct{color:#6b8a96}
+/* Plan grid */
+body.theme-dark .plan-card{background:rgba(255,255,255,0.03);border-color:#294352}
+body.theme-dark .plan-card:hover{border-color:#3fb8b0}
+body.theme-dark .plan-icon{background:linear-gradient(135deg,rgba(93,212,199,0.2),rgba(93,212,199,0.08))}
+body.theme-dark .plan-icon i{color:#5dd4c7}
+body.theme-dark .plan-card h3{color:#edf7f8}
+body.theme-dark .plan-card p{color:#8faab8}
+
+/* === DARK METHOD === */
+body.theme-dark .method-grid article{background:rgba(16,36,51,0.9);border-color:#294352;color:#edf7f8}
+body.theme-dark .method-grid h3{color:#edf7f8}
+body.theme-dark .method-grid p{color:#b2c0ca}
+body.theme-dark .method-icon{background:rgba(93,212,199,0.15);color:#5dd4c7}
+
+/* === DARK BOTTOM CTA === */
+body.theme-dark .bottom-cta{background:linear-gradient(135deg,#1a3a30,#132c3e);color:#edf7f8}
+body.theme-dark .bottom-cta h2{color:#edf7f8}
+body.theme-dark .bottom-cta p{color:#8faab8}
+body.theme-dark .text-button{color:#b2c0ca}
+body.theme-dark .text-button:hover{color:#fb765f}
+
+/* === DARK LAB === */
+body.theme-dark .motion-lab{color:#edf7f8}
+body.theme-dark .lab-copy h2{color:#edf7f8}
+body.theme-dark .lab-copy p{color:#b2c0ca}
+body.theme-dark .lab-copy b{color:#edf7f8}
+body.theme-dark .lab-copy ul{color:#b2c0ca}
+body.theme-dark .babylon-wrap{background:linear-gradient(135deg,#0a1520,#0d1f2d)}
+body.theme-dark .babylon-wrap small{color:#6b8a96}
+
+/* === DARK CATALOG GRID === */
+body.theme-dark .catalog-grid a{background:rgba(255,255,255,0.04);border-color:#294352}
+body.theme-dark .catalog-grid a:hover{border-color:#3fb8b0;background:rgba(255,255,255,0.08)}
+body.theme-dark .catalog-grid a b{color:#edf7f8}
+body.theme-dark .catalog-grid a span{color:#8faab8}
+body.theme-dark .catalog-grid a .card-status{color:#b2c0ca}
+body.theme-dark .catalog-icon{background:linear-gradient(135deg,rgba(43,149,141,0.25),rgba(43,149,141,0.1))}
+body.theme-dark .catalog-icon i{color:#5dd4c7}
+body.theme-dark .catalog-grid a:hover .catalog-icon{box-shadow:0 6px 20px rgba(251,118,95,0.25)}
+body.theme-dark .card-arrow{color:#fb765f}
+body.theme-dark .catalog-grid a:hover .card-arrow{color:#ff8a70}
+
+/* === DARK PRACTICE === */
+body.theme-dark .practice-panel{background:rgba(16,36,51,0.9);border-color:#294352;color:#edf7f8}
+body.theme-dark .practice-head{color:#edf7f8;border-color:#294352}
+body.theme-dark .level-selector select{background:#1a2a3a;border-color:#294352;color:#edf7f8}
+body.theme-dark .typing-line{background:rgba(13,31,45,0.8);border-color:#294352;color:#5dd4c7}
+body.theme-dark #typingInput{background:rgba(13,31,45,0.8);border-color:#294352;color:#edf7f8}
+body.theme-dark .standalone-practice .key{background:#1a2a3a;border-color:#294352;color:#b2c0ca}
+body.theme-dark .standalone-practice kbd.kb-home{background:linear-gradient(180deg,#2b958d,#1a6b64);border-color:#1a6b64;color:#fff}
+body.theme-dark .practice-stats .stat{background:rgba(255,255,255,0.04);border-color:#294352}
+body.theme-dark .practice-stats .stat:hover{border-color:#5dd4c7}
+body.theme-dark .close-practice{background:rgba(255,255,255,0.05);border-color:#294352;color:rgba(255,255,255,0.5);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+body.theme-dark .close-practice:hover{background:rgba(251,118,95,0.12);border-color:rgba(251,118,95,0.3);color:var(--coral)}
+
+/* === DARK MODAL === */
+body.theme-dark .completion-modal{background:rgba(10,21,32,0.7)}
+body.theme-dark .modal-card{background:#172d3d;border-color:#294352}
+body.theme-dark .modal-card h3{color:#edf7f8}
+body.theme-dark .modal-emoji{color:#5dd4c7}
+body.theme-dark .modal-stats div{background:rgba(255,255,255,0.04);border-color:#294352}
+
+/* === DARK RESOURCE CARDS === */
+body.theme-dark .resource-card{background:rgba(255,255,255,0.04);border-color:#294352}
+body.theme-dark .resource-card:hover{border-color:#3fb8b0;background:rgba(255,255,255,0.08)}
+body.theme-dark .resource-card.featured{background:rgba(43,149,141,0.06);border-color:rgba(93,212,199,0.25)}
+body.theme-dark .resource-info b{color:#edf7f8}
+body.theme-dark .resource-info p{color:#8faab8}
+body.theme-dark .resource-type{color:#6b8a96}
+body.theme-dark .resource-icon{background:linear-gradient(135deg,rgba(93,212,199,0.2),rgba(93,212,199,0.08))}
+body.theme-dark .resource-icon i{color:#5dd4c7}
+body.theme-dark .resource-card:hover .resource-icon{box-shadow:0 6px 16px rgba(251,118,95,0.2)}
+body.theme-dark .resource-link{color:#fb765f}
+body.theme-dark .resource-link:hover{color:#ff8a70}
+body.theme-dark .tag{background:rgba(93,212,199,0.12);color:#5dd4c7}
+
+/* === DARK COMPARISON TABLE === */
+body.theme-dark .comparison-table-wrap{background:rgba(255,255,255,0.03);border-color:#294352}
+body.theme-dark .comparison-table th{background:rgba(255,255,255,0.03);border-color:#294352;color:#8faab8}
+body.theme-dark .comparison-table td{border-color:rgba(255,255,255,0.04);color:#b2c0ca}
+body.theme-dark .comparison-table tr:hover td{background:rgba(93,212,199,0.05)}
+body.theme-dark .tbl-check{color:#5dd4c7}
+body.theme-dark .tbl-x{color:#294352}
+
+/* === DARK TIP CARDS === */
+body.theme-dark .tip-card{background:rgba(255,255,255,0.04);border-color:#294352}
+body.theme-dark .tip-card:hover{border-color:#3fb8b0;background:rgba(255,255,255,0.08)}
+body.theme-dark .tip-card h3{color:#edf7f8}
+body.theme-dark .tip-card p{color:#8faab8}
+body.theme-dark .tip-number{
+  background:linear-gradient(135deg,#fb765f,#e96553);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* === DARK FOOTER === */
+body.theme-dark .site-footer{background:#0a1520}
+
+/* === RESPONSIVE === */
+@media(max-width:480px){
+  .theme-toggle{width:30px;height:30px;font-size:14px}
+}

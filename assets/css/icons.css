@@ -1,0 +1,8 @@
+/* === ICONS (Font Awesome) === */
+.header-nav i{width:14px;height:14px;font-size:14px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.streak i{color:#f3a72c}
+.theme-toggle i{font-size:16px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.lesson-card .icon i{font-size:18px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.metric-icon i{font-size:16px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.method-icon i{font-size:18px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.card-status i{font-size:14px;display:inline-flex;align-items:center;justify-content:center}
